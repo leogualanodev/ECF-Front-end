@@ -10,7 +10,8 @@
 body{
     background-color: #fdf4e7;
 }
-/* style de mon header */
+/* style de la première page  */
+/* style de mon header (présent dans 2nd page) */
 header{
     display: flex;
     background-color: #fdf4e7;
@@ -70,7 +71,7 @@ header nav a{
 /* possibilité d'améliorer mon code, pour une facilité pour le responsive */
 
 
-main section{
+#main section{
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -84,14 +85,14 @@ main section{
     top: -60px;
 }
 
-main {
+#main {
     background-color: #ffd470;
     display: flex;
     min-height: 87vh;
     position: relative;
 }
 
-main figure img{
+#main figure img{
     width: 700px;
     height: 560px;
 
@@ -116,7 +117,7 @@ h1 {
     font-size: 40px;
 }
 
-main hr {
+#main hr {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -126,14 +127,14 @@ main hr {
     
 }
 
-main p {
+#main p {
     font-size: 14px;
     text-align: center;
     margin-top: 5px;
     
 }
 
-main input {
+#main input {
     width: 50%;
     margin: auto;
     padding: 15px;
@@ -143,7 +144,7 @@ main input {
     border-radius: 15px;
 }
 
-main figure{
+#main figure{
    display: flex;
    flex-direction: row-reverse;
    margin-left: 20%;
@@ -217,7 +218,7 @@ main figure{
     
 }
 
-/* style du footer */
+/* style du footer  (présent dans la 2nd page)*/
 
 footer {
     background-color: #ffd470;
@@ -276,6 +277,124 @@ footer {
 .thank p:nth-child(2){
     padding-bottom: 25px;
 } 
+
+
+
+
+/* style de la seconde page  */
+/* style du contenue de la page, des fenêtre qui vont récupérer les infos */
+
+#main-meal{
+    background-color: #fdf4e7;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+#main-meal h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+#main-meal h2{
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+#main-meal{
+    list-style-type: circle;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+#content-ingredient {
+    background-color: #ffd470;
+    width: 26%;
+    margin-top: 40px;
+    border: 1px solid #f55943;
+    border-radius: 20px;
+}
+
+#circle-2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    padding-top: 15px;
+}
+
+#circle-2 div{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: #f55943;
+    border:1px solid white;
+}
+
+#circle-2 p{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+}
+
+#image-meal{
+    width: 70%;
+    margin: auto;
+}
+
+#ingredient{
+    display: flex;
+    text-align: left;
+    margin-top: 15px;
+}
+.ingredient{
+    justify-content: space-between;
+    width: 40%;
+    margin: auto;
+    
+}
+#recipe{
+    padding: 20px;
+    font-size: 12px;
+}
+
+#main-meal input {
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    background-color: #f55943;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#button-video{
+    display: flex;
+}
+
+#name-meal{
+    text-align: center;
+}
+#category{
+    text-align: center;
+}
+
+#image-meal {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    
+}
+#image-meal img {
+    width: 200px;
+    
+}
+
 
 
 
