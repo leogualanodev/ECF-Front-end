@@ -142,6 +142,7 @@ h1 {
     color: white;
     font-size: 20px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 #main figure{
@@ -250,6 +251,7 @@ footer {
     width: 30%;
     border: 1px solid white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .button-footer img{
@@ -360,6 +362,7 @@ footer {
 #recipe{
     padding: 20px;
     font-size: 12px;
+    padding-top: 0px;
 }
 
 #main-meal input {
@@ -379,13 +382,16 @@ footer {
 
 #name-meal{
     text-align: center;
+    margin-top: 10px;
+    font-size:20px;
+    font-weight: 700;
 }
 #category{
     text-align: center;
 }
 
 #image-meal {
-    width: 60%;
+    width: 100%;
     margin: auto;
     text-align: center;
     
@@ -395,6 +401,52 @@ footer {
     
 }
 
+#category{
+    padding-bottom: 10px;
+}
+
+#content-ingredient hr{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f55943;
+    margin-top: 10px;
+    border: 1px solid #f55943;
+}
+
+#content-ingredient h2 {
+    
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#ingredient {
+    width: 90%;
+    margin: auto;
+    min-height: 240px;
+    
+}
+
+#ingredient li{
+    font-size: 13px;
+}
+
+#ingredient div {
+    padding-left: 10px;
+}
+
+#recipe span{
+    display: none;
+}
+
+#recipe  span .active{
+    display: block;
+}
+
+#recipe button {
+    background-color: #ffd470;
+    border: none;
+}
 
 
 

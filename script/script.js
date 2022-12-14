@@ -1,3 +1,4 @@
+
 let tab = new Array;
 tab[0] = "Monday"
 tab[1] = "Tuesday"
@@ -22,6 +23,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     <p>${tab[i]}</p>
     <div></div>
     </div>
+    <hr size="5">
     <p id="name-meal">${response.meals[0].strMeal}</p>
     <p id="category">${response.meals[0].strCategory}</p>
     <figure id="image-meal">
@@ -29,25 +31,26 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     </figure>
     <h2>Ingredients</h2>
     <div id="ingredient">
-    <div class="ingredient-f10${i}">
+    <div class="ingredient-f10-${i}">
       
     </div>
-    <div class="ingredient-l10${i}">
+    <div class="ingredient-l10-${i}">
         
     </div>
     </div>
     <h2>Recipe</h2>
-    <p id="recipe">${response.meals[0].strInstructions}</p>
+    <p id="recipe">${response.meals[0].strInstructions.substr(0,500)} <button class="button-${i}"> >> </button> <span>${response.meals[0].strInstructions.substr(500,2000)}</span></p>
     <div id="button-video">
     <input  type="button" value="Video recipe">
     </div>
     </section>`
 
    
-
+   
+    
 
             //    je remplie ici les ingrédients, je fais un if pour les cas ou il n'y a pas 20 ingredients
-    let ingredient = document.querySelector(`.ingredient-f10${i}`)
+    let ingredient = document.querySelector(`.ingredient-f10-${i}`)
     console.log(ingredient)
 
     if ( response.meals[0].strIngredient1 !== "" || response.meals[0].strIngredient1 == !null ){
@@ -81,7 +84,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
         ingredient.innerHTML += `<li> ${response.meals[0].strMeasure10} / ${response.meals[0].strIngredient10} </li>`
     }
 
-    let ingredient1 = document.querySelector(`.ingredient-l10${i}`)
+    let ingredient1 = document.querySelector(`.ingredient-l10-${i}`)
 
     if ( response.meals[0].strIngredient11 !== "" || response.meals[0].strIngredient11 == !null){
         ingredient1.innerHTML += `<li>${response.meals[0].strMeasure11} /  ${response.meals[0].strIngredient11} </li>`
