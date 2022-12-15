@@ -69,6 +69,14 @@ header nav a{
 
 .burger, #burger{display: none;}
 
+.burger img{
+    width: 40px;
+}
+
+header nav a:hover {
+    background-color: #ffd470;
+}
+
 
 
 /* style de ma zone de flotaison  */
@@ -491,6 +499,12 @@ footer {
         width: 60%;
     }
 
+    /* style 2nd page, carte des repas */
+
+    #main-meal {
+        width: 90%;
+    }
+
 }
 
 
@@ -517,6 +531,29 @@ footer {
         font-size: 20px;
         
     }
+
+    /* style de la 2nd page  */
+
+    #content-ingredient {
+        
+        width: 45%;
+        margin-top: 40px;
+        
+        border-radius: 20px;
+    }
+
+    #ingredient {
+        width: 90%;
+        margin: auto;
+        min-height: 200px;
+        
+    }
+    #image-meal img {
+        width: 250px;
+        
+    }
+
+
 }
 
 @media (max-width:950px){
@@ -562,8 +599,14 @@ footer {
     #commitment-content{
         display: flex;
         flex-direction: column;
-        align-items: center;
         
+        
+    }
+    .content p {
+        padding: 0px;
+    }
+    .content{
+        justify-content: center;
     }
 
     #about-us p {
@@ -590,6 +633,28 @@ footer {
         border: 1px solid white;
         border-radius: 10px;
         cursor: pointer;
+    }
+    /* style 2nd page avec mes repas  */
+    #content-ingredient {
+        
+        width: 80%;
+        margin-top: 40px;
+        
+        border-radius: 20px;
+    }
+
+    #ingredient {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        min-height: 200px;
+        margin-top:20px;
+        
+    }
+    #image-meal img {
+        width: 250px;
+        
     }
 }
 
@@ -656,11 +721,23 @@ footer {
         width: 100%;
     }
 
-    
+    /* style 2nd page avec mes repas  */
+    #content-ingredient {
+        
+        width: 100%;
+        margin-top: 40px;
+        
+        border-radius: 20px;
+    }
+
+    #image-meal img {
+        width: 200px;
+        
+    }
 }
 
 
-@media (max-width:500px){
+@media (max-width:450px){
 
     /* style header */
     header label {
