@@ -81,34 +81,30 @@ header nav a:hover {
 
 /* style de ma zone de flotaison  */
 /* possibilité d'améliorer mon code, pour une facilité pour le responsive */
+/* j'avais fait en position relative et absolue pour superposé mes 2éléments j'ai finalement opté pour les grids beaucoup plus simple pour le responsive  */
 
 
 #main section{
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    width: 27%;
-    background-color: white;
-    margin-left: 550px;
-    height: 450px;
-    margin-top: 250px;
-    position: absolute;
-    left: -150px;
-    top: -60px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 9;
+    z-index: 1;
 }
+
+
 
 #main {
     background-color: #ffd470;
-    display: flex;
     min-height: 87vh;
-    position: relative;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
-#main figure img{
-    width: 700px;
-    height: 560px;
 
-}
 #circle {
     display: flex;
     justify-content: space-around;
@@ -157,14 +153,23 @@ h1 {
     cursor: pointer;
 }
 
-#main figure{
-   display: flex;
-   flex-direction: row-reverse;
-   margin-left: 20%;
-   
-   width: 100%;
-   align-items: center;
-   justify-content: center;   
+
+#main figure {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    background-image: url(./images/image-meal-zf.webp);
+    background-size: cover;
+    
+    
+}
+#title-card{
+    background-color: white;
+    height: 100%;
+     display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
 
 
@@ -483,17 +488,11 @@ footer {
 /* Responsive  */
 
 @media (max-width:1500px){
-    #main section{
-        width: 35%;
-        background-color: white;
-        margin-left: 550px;
-        height: 450px;
-        margin-top: 250px;
-        position: absolute;
-        left: -400px;
-        top: -60px;
+    /* style zone de flot */
+    #main input{
+        width: 70%;
+        margin: auto;
     }
-
     /* style footer */
     #button-container {
         width: 60%;
@@ -509,19 +508,7 @@ footer {
 
 
 @media (max-width:1200px){
-    #main section{
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-        width: 35%;
-        background-color: white;
-        margin-left: 550px;
-        height: 450px;
-        margin-top: 250px;
-        position: absolute;
-        left: -500px;
-        top: -150px;
-    }
+    
     #main input {
         width: 75%;
         margin: auto;
@@ -563,19 +550,18 @@ footer {
         background-image: url(./images/image-plat-zf.jpg);
         background-size: cover;
     }
+    #main section{
+        grid-column-start: 3;
+        grid-column-end: 9;
+        grid-row-start: 3;
+        grid-row-end: 9;
+        z-index: 1;
+    }
     #main figure {
         display: none;
     }
-    #main section{
-        width: 45%;
-        background-color: white;
-        margin-left: 550px;
-        height: 450px;
-        margin-top: 250px;
-        position: absolute;
-        left: -500px;
-        top: -60px;
-    }
+    
+    
     #main h1{
         font-size: 35px;
     }
@@ -678,21 +664,36 @@ footer {
         position: absolute;
         width:150px;
         right:10px ; 
-        top: 104px;
+        top: 88px;
         background:  #fdf4e7;
         max-height: 0;
         transition: 1s all ease;
         overflow: hidden;
     }
    
-    #burger:checked~ header nav{
+    #burger:checked~nav{
         max-height: 200px;
         transition: 2s all ease;
         
     }
-    header nav a{
-        display: block;
-        padding: 10px 5px;
+    header nav {
+        display: flex;
+        flex-direction: column;
+       
+        text-align: center;
+    }
+
+    header nav a {
+        background-color: #ffd470;
+        padding: 20px;
+        
+        border:0px ;
+        border-radius: 0px;
+        
+    }
+    header nav a:hover {
+        color: #f55943;
+        
     }
 
     header label {
@@ -701,19 +702,15 @@ footer {
 
     /* style zone de flot */
 
-    #main section {
-        width: 80%;
-        height: 50vh;
-        margin-top: 200px;
-    
-        
-    }
     #main figure {
         display: none;
     }
-
-    #main {
-        background-image: none;
+    #main section{
+        grid-column-start: 2;
+        grid-column-end: 10;
+        grid-row-start: 2;
+        grid-row-end: 10;
+        z-index: 1;
     }
 
     /* style footer */
