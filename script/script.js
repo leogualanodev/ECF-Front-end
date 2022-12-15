@@ -1,4 +1,4 @@
-
+// je définie un tableau avec les jours de la semaine de manière à l'utilisé quand je remplie mes repas 
 let tab = new Array;
 tab[0] = "Monday"
 tab[1] = "Tuesday"
@@ -8,7 +8,7 @@ tab[4] = "Friday"
 tab[5] = "Saturday"
 tab[6] = "Sunday"
 
-
+// je fais une boucle de 7 tours pour remplir mes 7 repas de la semaine 
 for ( let i = 0 ; i < 7 ; i++){
 fetch("https://www.themealdb.com/api/json/v1/1/random.php")
 .then(response => response.json())
@@ -27,7 +27,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     <p id="name-meal">${response.meals[0].strMeal}</p>
     <p id="category">${response.meals[0].strCategory}</p>
     <figure id="image-meal">
-    <img src="${response.meals[0].strMealThumb}" alt="">
+    <img src="${response.meals[0].strMealThumb}" alt="${response.meals[0].strMeal}">
     </figure>
     <h2>Ingredients</h2>
     <div id="ingredient">
@@ -39,7 +39,9 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     </div>
     </div>
     <h2>Recipe</h2>
-    <p id="recipe">${response.meals[0].strInstructions.substr(0,500)} <button class="button-${i}"> >> </button> <span>${response.meals[0].strInstructions.substr(500,2000)}</span></p>
+    <div class="scroll">
+    <p id="recipe">${response.meals[0].strInstructions}</p>
+    </div>
     <div id="button-video">
     <input  type="button" value="Video recipe">
     </div>
@@ -122,47 +124,3 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
 
 
 
-//  <section id="content-ingredient">
-// <div id="circle-2">
-// <div></div>
-// <p>Monday</p>
-// <div></div>
-// </div>
-// <p id="name-meal">leo</p>
-// <p id="category">heh</p>
-// <figure id="image-meal">
-// <img src="./images/drapeau-fr.png" alt="">
-// </figure>
-// <h2>Ingredient</h2>
-// <div id="ingredient">
-// <div class="ingredient f10">
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-// </div>
-// <div class="ingredient l10">
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-//     <li></li>
-// </div>
-// </div>
-// <h2>Recipe</h2>
-// <p id="recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto similique voluptates dolores perferendis eos deserunt ea, facilis, vero voluptas fugit veniam ut cupiditate quam commodi! Sunt hic tempora ratione voluptatibus.</p>
-// <div id="button-video">
-// <input type="button" value="Video recipe">
-// </div>
-// </section>

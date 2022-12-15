@@ -67,6 +67,10 @@ header nav a{
     margin-left: 10px;
 }
 
+.burger, #burger{display: none;}
+
+
+
 /* style de ma zone de flotaison  */
 /* possibilité d'améliorer mon code, pour une facilité pour le responsive */
 
@@ -435,19 +439,249 @@ footer {
     padding-left: 10px;
 }
 
-#recipe span{
-    display: none;
+
+#recipe {
+    line-height: 20px;
+}
+.scroll {
+    max-height: 250px;
+    overflow-y: scroll;
+    
 }
 
-#recipe  span .active{
-    display: block;
+/* style de la barre de scroll  */
+::-webkit-scrollbar {
+    width: 13px;
+  }
+
+
+::-webkit-scrollbar-thumb {
+    background: #fdf4e7; 
+    border-radius: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px #ffd470 ;
+    border-radius: 10px;
+    background: #ffd470;
+  }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f55943; 
 }
 
-#recipe button {
-    background-color: #ffd470;
-    border: none;
+
+
+/* Responsive  */
+
+@media (max-width:1500px){
+    #main section{
+        width: 35%;
+        background-color: white;
+        margin-left: 550px;
+        height: 450px;
+        margin-top: 250px;
+        position: absolute;
+        left: -400px;
+        top: -60px;
+    }
+
+    /* style footer */
+    #button-container {
+        width: 60%;
+    }
+
 }
 
+
+@media (max-width:1200px){
+    #main section{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        width: 35%;
+        background-color: white;
+        margin-left: 550px;
+        height: 450px;
+        margin-top: 250px;
+        position: absolute;
+        left: -500px;
+        top: -150px;
+    }
+    #main input {
+        width: 75%;
+        margin: auto;
+        padding: 15px;
+        background-color: #f55943;
+        color: white;
+        font-size: 20px;
+        
+    }
+}
+
+@media (max-width:950px){
+
+    /* style zone de flot */
+    #main {
+        background-image: url(./images/image-plat-zf.jpg);
+        background-size: cover;
+    }
+    #main figure {
+        display: none;
+    }
+    #main section{
+        width: 45%;
+        background-color: white;
+        margin-left: 550px;
+        height: 450px;
+        margin-top: 250px;
+        position: absolute;
+        left: -500px;
+        top: -60px;
+    }
+    #main h1{
+        font-size: 35px;
+    }
+
+    /* style du header */
+    header nav a{
+        font-size: 12px;
+        
+    }
+
+    header figure {
+        padding-left: 10px;
+    }
+
+    #disclaimer {
+        font-size: 12px;
+    }
+
+    /* style who we are  */
+
+    #commitment-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #about-us p {
+        font-size: 20px;
+    }
+    #content{
+        
+        width: 90%;
+        margin: auto;
+    }
+    /* style footer */
+    #button-container {
+        width: 80%;
+    }
+
+    .button-content p:nth-child(2){
+        font-size: 15px;
+    }
+    .button-footer{
+        display: flex;
+        background-color: black;
+        color: white;
+        width: 40%;
+        border: 1px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width:600px){
+
+    /* style du header responsive */
+    header figure{
+        padding-left: 40px;
+        
+    }
+    header figure a {
+        font-size: small;
+        
+    }
+    .burger {
+        display: block;
+    }
+    header label{display: block;}
+    header nav{
+        position: absolute;
+        width:150px;
+        right:10px ; 
+        top: 104px;
+        background:  #fdf4e7;
+        max-height: 0;
+        transition: 1s all ease;
+        overflow: hidden;
+    }
+   
+    #burger:checked~ header nav{
+        max-height: 200px;
+        transition: 2s all ease;
+        
+    }
+    header nav a{
+        display: block;
+        padding: 10px 5px;
+    }
+
+    header label {
+        padding-left: 150px;
+    }
+
+    /* style zone de flot */
+
+    #main section {
+        width: 80%;
+        height: 50vh;
+        margin-top: 200px;
+    
+        
+    }
+    #main figure {
+        display: none;
+    }
+
+    #main {
+        background-image: none;
+    }
+
+    /* style footer */
+    #button-container {
+        width: 100%;
+    }
+
+    
+}
+
+
+@media (max-width:500px){
+
+    /* style header */
+    header label {
+        padding-left: 75px;
+    }
+
+    #disclaimer {
+        font-size: 10px;
+    }
+
+
+    /* style du footer */
+    #button-container{
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        margin: 25px 0px;    
+    }
+
+}
 
 
 
