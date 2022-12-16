@@ -2,7 +2,7 @@
 
 # Le projet : 
 coder un site permettant de pouvoir proposer des idées de repas à une famille sur une semaine. En somme, un "Suggestionneur de Repas", en utilisant l'API suivante : [TheMealDB](https://www.themealdb.com/)
-Ici, à chaque refresh de la page, de nouveaux repas seront chargés : peut être améliorer à ce niveau là
+
 
 
 # La maquette
@@ -33,4 +33,12 @@ Ma page des repas :
 - pas de paragraphe descriptif ==> choix perso pour l'esthétique 
 - requête cible proposé : Meal , week
 - proposition de slug : https://thelittlechef.en/mealsoftheweek/
- 
+
+
+# Mon retour sur le travail éffectué et les points à améliorer 
+
+- le code js qui fait appel à l'api peut être optimisé , en particulier la partie avec les ingrédients 
+- Le coté graphique du site, peut-être les couleurs (le rendu ne me convient pas)
+- le logo du site 
+- à chaque refresh de la page "repas", des repas aléatoires sont chargés: dans un second temps ce serait bien de stocker les repas pour les réaficher!
+- SEO à améliorer (on peut toujours mieu faire)

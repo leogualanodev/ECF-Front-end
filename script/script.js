@@ -15,12 +15,13 @@ tab[6] = "Sunday"
 
 
 for ( let i = 0 ; i < 7 ; i++){
+    // je fetch à l'adresse de l'api qui renvoie des repas aléatoires 
 fetch("https://www.themealdb.com/api/json/v1/1/random.php")
 .then(response => response.json())
 .then(function(response){
 
     let mainMeal = document.querySelector(`#main-meal`);
-
+    // j'ajoute à chaque boucle du contenue html 
     mainMeal.innerHTML += ` <section id="content-ingredient">
                             <div id="circle-2">
                             <div></div>
@@ -53,7 +54,8 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
 
     
 
-    //    je remplie ici les ingrédients, je fais un if pour les cas ou il n'y a pas 20 ingredients 
+    //    je remplie ici les ingrédients, je fais un if pour les cas ou il n'y a pas 20 ingredients
+    // je compare l'ingredient avec null et "" , si la condition est validé alors on remplie avec l'ingredient en question  
     let ingredient = document.querySelector(`.ingredient-f10-${i}`)
     
 

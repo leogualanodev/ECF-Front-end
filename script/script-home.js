@@ -1,3 +1,7 @@
+
+// script de ma première page 
+// je dynamise mes input et mes liens externes 
+
 let input = document.querySelector(`#main input`)
 
 input.addEventListener("click",openMeal)
