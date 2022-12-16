@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="The Little Chef : Various recipe meals for your week">
+    <meta name="description" content="Welcome to The litlle Chef. Come and discover your meals for your work or rest week" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The little Chef : Your weekly meals</title>
+    <link rel="shortcut icon" type="image/png" href="./images/fav-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script/script.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <figure>
+            <img src="./images/logo-site.png" alt="logo-littleChef">
+            <a href="index.html">the little chef</a>
+        </figure>
+        <label class="burger" for="burger"><img class="burger-logo" src="./images/menu-burger1.png" alt="menu-burger"></label>
+        <input type="checkbox" id="burger" >
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="meal.html">Meal of the week</a>
+            <a href="index.html">Who we are ?</a>
+        </nav>
+        
+    </header>
+
+    <p id="disclaimer">Eat 5 fruits and vegetable a day! <a href="https://www.santepubliquefrance.fr/determinants-de-sante/nutrition-et-activite-physique/documents/brochure/50-petites-astuces-pour-manger-mieux-et-bouger-plus">Santé publique France</a> <img src="./images/drapeau-fr.png" alt="fr-flag"> </p>
+    <h1>Your weakly meals</h1>
+
+
+    <main id="main-meal">
+        <!-- l'API remplie le main de ma page -->
+    </main>
+
+    <footer>
+        <figure id="logo">
+            <img  src="./images/logo-site.png" alt="logo-littleChef">
+        </figure>
+        <p id="slogan">The meal that serves you</p>
+        <div id="button-container">
+            <button class="button-footer">
+                <span class="button-img">
+                    <img src="./images/logo-apple.png" alt="logo-apple">
+                </span>
+                <span class="button-content">
+                    <span>Available on</span>
+                    <span>App store</span>
+                </span>     
+            </button>
+            <button class="button-footer">
+                <span class="button-img">
+                    <img src="./images/logo-goole.png" alt="logo-googleplay">
+                </span>
+                <span class="button-content">
+                    <span>Available on</span>
+                    <span>Google play</span>
+                </span>     
+            </button>
+        </div>
+        <div class="thank">
+            <p>2022 © Léo GUALANO</p>
+            <p>Thanks to <a href="https://www.themealdb.com/api.php">TheMealsDB API</a></p>
+        </div>
+    </footer>
+</body>
+</html>
